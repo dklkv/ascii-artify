@@ -27,10 +27,9 @@ Cons:
 - Less user-friendly for beginners
 - Smaller ecosystem
 
-## Demonstration
-
 ## Conclusion
 k3d is the best recommendation for Ascii Artify project because this is a fast and lightweight tool. It can work with production-scale environments when other tools are mostly inteded for local development and testing. k3d can be used during initial stages of product development.
 Podman can be considered as Docker alternative, because it is free to use and lightweight tool.
 
-
+## Demo
+![k3d demo](demo.gif)
