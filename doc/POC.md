@@ -71,4 +71,22 @@ pVHY37xZIGxCyLK5
 - Check `AUTO-CREATE NAMESPACE` option
 - Click `CREATE`
 6. The application tile will appear on dashboard. Click on application tile and sync:
+- Click `SYNC`
+- Select components and click `SYNCHRONIZE` on pop-up window
+- The button below shows the status of cluster and pods
+![ArgoCD status](images/argocd_status.png)
+7. Check that ArgoCD monitors the state of repository:
+- Change NodePort to LoadBalancer (last line in [values.yaml](https://github.com/dklkv/go-demo-app/blob/master/helm/values.yaml))
+- ArgoCD will trigger OutOfSync status
+![OutOfSync](images/argocd_outofsync.png)
+- `ambassador` service changed its type from NodePort to LoadBalancer
+```bash
+$ kubectl get svc -n demo
+NAME               TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)
+ambassador         NodePort       10.43.125.61    <none>        80:31471/TCP                   
 
+$ kubectl get svc -n demo
+NAME               TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)         AGE
+ambassador         LoadBalancer   10.43.125.61    <pending>     80:31471/TCP    3m
+
+```
