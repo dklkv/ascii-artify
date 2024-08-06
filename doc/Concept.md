@@ -1,3 +1,5 @@
+# Concept
+
 ## minikube
 Minikube is a lightweight and simplified version of Kubernetes, primarily used for local development and testing purposes. Minikube provides a local environment where developers can replicate essential functions. This enables them to work with pods, services, and deployments like a production cluster. Minikube can be deployed as a VM, a container, or on bare-metal.
 
@@ -12,8 +14,8 @@ k3d makes it very easy to create single- and multi-node k3s clusters in docker, 
 
 | **Pros and Cons**                               | **minikube**                                     | **kind**                                         | **k3d**                                          |
 |--------------------------------------------------|--------------------------------------------------|--------------------------------------------------|--------------------------------------------------|
-| **Pros**                                      | - Cross-platform (Linux, macOS, Windows)<br>- Convenient and user-friendly tool for local deployment and testing<br>- Multiple container runtimes<br>- Advanced features such as LoadBalancer, filesystem mounts, FeatureGates, and network policy<br>- Add-ons | - Supports Linux, macOS and Windows<br>- Good for local development and testing<br>- Creates lightweight Kubernetes clusters inside Docker containers | -Cross-platform <br>- Suitable for local development and testing<br>- Fastest tool<br>- Can work with production-scale environments|
-| **Cons**                                      | - Cluster size: single-node by default, multi-node is available, but not a major focus<br>- Doubts about scalability<br>- Storage handling - on local directories inside the Minikube machine<br>- Supports only basic ingress configurations | - It is not designed for scalability and is best suited for scenarios involving small clusters | -Potential limitations |
+| **Pros**                                      | - Cross-platform (Linux, macOS, Windows)<br>- Convenient and user-friendly tool for local deployment and testing<br>- Multiple container runtimes<br>- Advanced features such as LoadBalancer, filesystem mounts, FeatureGates, and network policy<br>- Add-ons | - Supports Linux, macOS and Windows<br>- Good for local development and testing<br>- Creates lightweight Kubernetes clusters inside Docker containers | -Cross-platform <br>- Suitable for local development and testing<br>- Fastest tool<br>- Can work with production-scale environments<br>- Helm integration|
+| **Cons**                                      | - Cluster size: single-node by default, multi-node is available, but not a major focus<br>- Doubts about scalability<br>- Storage handling - on local directories inside the Minikube machine<br>- Supports only basic ingress configurations | - It is not designed for scalability and is best suited for scenarios involving small clusters<br>- Weak community and lack of documentation | -Potential limitations |
 
 ## Podman
 Podman is a daemonless, open source, Linux native tool designed to make it easy to find, run, build, share and deploy applications using Open Containers Initiative (OCI) Containers and Container Images.<br>
@@ -32,4 +34,4 @@ k3d is the best recommendation for Ascii Artify project because this is a fast a
 Podman can be considered as Docker alternative, because it is free to use and lightweight tool.
 
 ## Demo
-![k3d demo](demo.gif)
+![k3d demo](images/demo.gif)
