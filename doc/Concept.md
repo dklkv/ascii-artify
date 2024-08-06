@@ -34,4 +34,4 @@ k3d is the best recommendation for Ascii Artify project because this is a fast a
 Podman can be considered as Docker alternative, because it is free to use and lightweight tool.
 
 ## Demo
-![k3d demo](images/demo.gif)
+![k3d demo](demos/demo.gif)
